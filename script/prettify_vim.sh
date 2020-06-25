@@ -147,5 +147,23 @@ echo $PASS | sudo -S apt-get -y install build-essential cmake python3-dev
 wait 
 
 show "\t[Info] installing YouCompleteMe "
-sudo python3 ~/.vim/bundle/YouCompleteMe/install.py 
+/home/$USER/.vim/bundle/YouCompleteMe/install.py --clang-completer 
+#--system-libclang 
+wait 
+
+### copy .ycm_extra_conf
+cp ./files/.ycm_extra_conf.py /home/$USER/.vim/bundle/YouCompleteMe/ 
+
+### change c++ include file path of .ycm_extra_conf.py
+show "\t[Info] changing .ycm_extra_conf.py c++ include path"
+find /usr/include/c++ >> tmp.txt
+result="$(grep '/profile/array' tmp.txt)"
+result=$(echo $result | sed 's#/profile\/array##g' )
+rm tmp.txt 
+echo "$result"
+sed -i "s#\/usr\/include\/c++\/xx#$result#g" /home/$USER/.vim/bundle/YouCompleteMe//.ycm_extra_conf.py 
+
+
+
+
 
