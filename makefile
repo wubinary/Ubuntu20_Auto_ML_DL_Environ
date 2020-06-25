@@ -13,5 +13,5 @@ prepare:
 prettify_zsh:
 	sh prettify_zsh.sh $(PASSWD)
 prettify_vim:
-	
+	sh prettify_vim.sh $(PASSWD)	
 	
