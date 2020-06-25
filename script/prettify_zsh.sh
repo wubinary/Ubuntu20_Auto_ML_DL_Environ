@@ -47,7 +47,7 @@ fi
 #################  Theme  #################
 show "[Info] Install zsh Theme"
 if ! grep -q 'TERM="xterm-256color"' ~/.zshrc; then #上色東東
-	sed -i '3iexport TERM="xterm-256color"\n' /home/$USER/.zshrc
+	sed -i '3iexport TERM="xterm-256color"\n' /home/$USER/.zshrc 
 fi 
 # powerline字體, powerlevel主題, zsh-syntax-higtlight高亮度顯示
 wait_apt_lock()
@@ -78,6 +78,13 @@ if [ ! -d "/home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
 fi
 if ! grep -q "zsh-autosuggestions.zsh" ~/.zshrc; then
 	echo "source /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+fi 
+
+###########################################
+#############  alias commands  ############
+if ! grep -q "nvw='watch" ~/.zshrc; then 
+	echo "\n\n\nalias nvw='watch nvidia-smi' \nalias ll='ls -al'" >> ~/.zshrc 
+	echo "\nalias gst='git status' \nalias gpl='git pull'" >> ~/.zshrc 
 fi 
 
 ###################
