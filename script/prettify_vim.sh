@@ -34,11 +34,6 @@ download_from_gdrive() {
 	"https://drive.google.com$download_link" > $file_name
 }
 
-##########################################
-#############  Vim scripts  ##############
-show "#####################################"
-show "#########  Vim scripts  #############"
-
 ###########################################
 #############  Default vim  ###############
 show "[Info] Install default vim config"
