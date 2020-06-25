@@ -2,15 +2,24 @@
 
 
 
-```
+```command=
 sudo apt-get update
 sudo apt-get install make git
 
-make PASSWD=xxx change_shell
-reboot
-make PASSWD=xxx main 
+##change shell
+make PASSWD=<xxx> change_shell
+<reboot>
 
-chsh 
+##install nvidia-driver
+make PASSWD=<xxx> nvidia_driver
+<reboot>
+<check nvidia-smi>
+
+##install remains
+make PASSWD=<xxx> main 
+
+## have fun :)
+
 ``` 
 
 
