@@ -4,14 +4,14 @@ test: prettify_zsh
 
 ### change shell
 change_shell:
-	sh change_shell.sh $(PASSWD)
+	sh script/change_shell.sh $(PASSWD)
 
 ### main scripts
-main: prepare prettify_zsh
+main: prepare prettify_zsh prettify_vim
 prepare:
-	sh prepare.sh $(PASSWD)
+	sh script/prepare.sh $(PASSWD)
 prettify_zsh:
-	sh prettify_zsh.sh $(PASSWD)
+	sh script/prettify_zsh.sh $(PASSWD)
 prettify_vim:
-	sh prettify_vim.sh $(PASSWD)	
+	sh script/prettify_vim.sh $(PASSWD)	
 	

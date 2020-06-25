@@ -37,9 +37,9 @@ echo $PASS | sudo -S ufw allow OpenSSH
 echo $PASS | sudo -S ufw enable 
 
 # 安裝 tmux net-tools lm-sensors
-show "[Info] Install tmux, net-tools, lm-sensors"
+show "[Info] Install tmux net-tools lm-sensors htop curl"
 wait_apt_lock()
-echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors
+echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors htop curl
 
 # 安裝 gdrive
 show "[Info] Install gdrive"
@@ -47,4 +47,8 @@ wait_apt_lock()
 echo $PASS | sudo -S add-apt-repository ppa:alessandro-strada/ppa
 echo $PASS | sudo -S apt-get -y install google-drive-ocamlfuse
 
+# gcc g++
+show "[Info] Install gcc g++"
+wait_apt_lock()
+echo $PASS | sudo -S apt-get -y install gcc g++
 
