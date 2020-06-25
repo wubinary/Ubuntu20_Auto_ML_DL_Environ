@@ -58,12 +58,15 @@ show "[Info] Install NV-driver"
 wait_apt_lock()
 echo $PASS | sudo -S apt-get -y install --no-install-recommends nvidia-driver-430
 
+wait_apt_lock()
+rm -rf *.deb 
+
 #######################################################
 #####################  Reboot  ########################
 show "\t###############################################"
-show "\t##	 										 ##"
+show "\t##                                           ##"
 show "\t##   [Info] Finish install nvidia-drivers    ##"
-show "\t##	 [Info]	Please Reboot !! 	             ##"
+show "\t##   [Info]	Please Reboot !!                 ##"
 show "\t##           Thanks :)                       ##"
 show "\t##                                           ##"
 show "\t###############################################"
