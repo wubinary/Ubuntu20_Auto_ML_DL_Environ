@@ -39,4 +39,14 @@ echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/addus
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/default/useradd
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/default/useradd
 
+########################################################
+#####################  Reboot  #########################
+show "\t################################################"
+show "\t##                                            ##"
+show "\t##   [Info] Finish change shell to zsh        ##"
+show "\t##   [Info] Please Reboot !!                  ##"
+show "\t##            Thanks :)                       ##"
+show "\t##                                            ##"
+show "\t################################################"
+
 
