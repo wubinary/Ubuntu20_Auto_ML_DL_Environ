@@ -4,11 +4,11 @@
 
 ```
 sudo apt-get update
-sudo apt-get install make
+sudo apt-get install make git
 
-make change_shell
+make PASSWD=xxx change_shell
 reboot
-make main 
+make PASSWD=xxx main 
 
 chsh 
 ``` 
