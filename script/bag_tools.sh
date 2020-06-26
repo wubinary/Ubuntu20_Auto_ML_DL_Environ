@@ -28,12 +28,13 @@ mkdir -p trash
 ###########################################
 ################  套件們  #################
 # 安裝 ssh 套件, 開啟防火牆
-show "[Info] Install ssh-server & setting firewall"
+show "[Info] Install ssh-server $ Apahce2 & setting firewall"
 wait_apt_lock()
-echo $PASS | sudo -S apt-get -y install openssh-server
+echo $PASS | sudo -S apt-get -y install openssh-server apache2
 show "[Info] setting ubuntu ufw ; enable ufw"
 echo $PASS | sudo -S ufw app list 
-echo $PASS | sudo -S ufw allow OpenSSH
+echo $PASS | sudo -S ufw allow OpenSSH 
+echo $PASS | sudo -S ufw allow Apache
 echo $PASS | sudo -S ufw enable 
 
 # 安裝 tmux net-tools lm-sensors
