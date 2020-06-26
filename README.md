@@ -9,7 +9,7 @@
 - [x] vim (ycm)
 - [x] nvidia-driver & cuda
 - [x] python3 ml enviroment (torch keras tensorflow)
-```=
+```command
 sudo apt-get update
 sudo apt-get install make git
 git clone https://github.com/wubinary/Ubuntu_Auto_ML_Environ.git
