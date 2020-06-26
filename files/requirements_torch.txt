@@ -1,0 +1,8 @@
+torch==1.5.1
+torchvision
+torchaudio
+torchsummary
+
+transformers
+
+

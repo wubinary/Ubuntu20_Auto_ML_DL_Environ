@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+
+tqdm
+
+beautifulsoup4
+seaborn
+
