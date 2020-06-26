@@ -19,27 +19,38 @@ wait_apt_lock(){
 ###########################################
 ############  Install CUDA  ###############
 
-show "######################################"
-show "###########  Install CUDA  ###########"
-show "https://www.tensorflow.org/install/gpu"
-show " cuda-10-1, libcudnn7=7.6.4.38-1, libnvinfer6=6.0.1-1"
+show "######################################
+\t###########  Install CUDA  ###########
+\thttps://www.tensorflow.org/install/gpu"
 show ""
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 
+nvdrive_version=$(nvidia-smi | grep 'Driver Version:')
+show "[Info] Find nv-drivers 
+$nvdrive_version"
+show ""
+
+echo $PASS | sudo -S apt-get update
+wait_apt_lock()
+
 # Install development and runtime libraries (~4GB)
 show "[Info] Install cuda development and runtime libraries "
-echo $PASS | sudo -S apt-get -y install --no-install-recommends \
+echo $PASS | sudo -S apt-get install -y --no-install-recommends \
     cuda-10-1 \
     libcudnn7=7.6.4.38-1+cuda10.1  \
     libcudnn7-dev=7.6.4.38-1+cuda10.1
-wait 
+wait_apt_lock()
 
 # Install TensorRT. Requires that libcudnn7 is installed above.
 show "[Info] Install TensorRT "
-echo $PASS | sudo -S apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
+echo $PASS | sudo apt-get install -y --no-install-recommends \
+	libnvinfer6=6.0.1-1+cuda10.1 \
     libnvinfer-dev=6.0.1-1+cuda10.1 \
     libnvinfer-plugin6=6.0.1-1+cuda10.1
-wait 
+wait_apt_lock()
 
+show "[Info] Finish Installing CUDA enviroment"
+show ""
+show "" 
 
