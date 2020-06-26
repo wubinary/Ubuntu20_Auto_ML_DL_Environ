@@ -79,21 +79,22 @@
 
 ## ZSH Plugins
 * [oh-my-zsh](https://)
-    with git tools
+    - with git tools
 * [powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
 * [zsh-syntax-hightligh](https://github.com/zsh-users/zsh-syntax-highlighting)
-    colorfy multiple commands.
+    - colorfy multiple commands.
 * [zsh-autosugestions](https://github.com/zsh-users/zsh-autosuggestions)
-    memory commands typed before and recommend command when you type.
+    - memory commands typed before and recommend command when you type.
     
 ![](https://i.imgur.com/CiznVLZ.png)
 
 ## VIM (YCM)
 * [YCM (You Complete Me)](https://github.com/ycm-core/YouCompleteMe)
-    python3 & c/c++ prompt word
-    c/c++: [ESC] auto grammar test
+
 ![](https://i.imgur.com/3eq2Nnu.gif)
+python3 & c/c++ prompt word
 ![](https://i.imgur.com/A077MSN.gif)
+c/c++: [ESC] auto grammar test
 
 
 # Other auto install scripts
@@ -108,5 +109,4 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 ```=
 => [shift] + right mouse click = paste
 ```
-
 
