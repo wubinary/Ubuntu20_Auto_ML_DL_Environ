@@ -9,6 +9,7 @@ NC='\033[0m' # No Color
 show(){
 	echo "\t${LCYAN}$1${NC}"
 	sleep 1
+	wait 
 }
 
 wait_apt_lock(){
@@ -27,7 +28,8 @@ else
 	rm -rf /home/$USER/.zsh_history
 	rm -rf /home/$USER/.zshrc
 	rm -rf /home/$USER/.oh-my-zsh/
-	#wget https://raw.githubusercontent.com/wubinary/Ubuntu_Auto_ML_Environ/master/files/.zshrc?token=AGA7HSMUHJWCLN6EABO4MIS67U5QA -O /home/$USER/.zshrc
+	wget https://raw.githubusercontent.com/wubinary/Ubuntu_Auto_ML_Environ/master/files/.zshrc?token=AGA7HSMUHJWCLN6EABO4MIS67U5QA -O /home/$USER/.zshrc
+	wait 
 fi 
 
 ###########################################
@@ -37,8 +39,8 @@ if [ ! -d "/home/$USER/.oh-my-zsh/" ]; then
 	show "[Info] Install oh-my-zsh default config"
 	rm -rf /home/$USER/.zshrc
 	wget -O tempinstall.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && echo "exit\n" | zsh tempinstall.sh
+	wait 
 	rm -rf tempinstall.sh
-	#echo "1\n" | zsh 
 else
 	echo "oh-my-zsh already installed"
 fi
@@ -50,8 +52,8 @@ if ! grep -q 'TERM="xterm-256color"' ~/.zshrc; then #上色東東
 	sed -i '3iexport TERM="xterm-256color"\n' /home/$USER/.zshrc 
 fi 
 # powerline字體, powerlevel主題, zsh-syntax-higtlight高亮度顯示
-wait_apt_lock()
 echo $PASS | sudo -S apt-get -y install powerline fonts-powerline zsh-theme-powerlevel9k zsh-syntax-highlighting
+wait_apt_lock()
 # 啟用主題
 if ! grep -q "powerlevel9k.zsh-theme" ~/.zshrc; then #像mac
 	echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
@@ -68,17 +70,19 @@ fi
 show "[Info] Install other zsh plugins"
 # auto jump
 echo $PASS | sudo -S apt-get -y install autojump
+wait_apt_lock()
 echo $PASS | sudo -S chmod +x /usr/share/autojump/autojump.sh
 if ! grep -q "autojump.sh" ~/.zshrc; then
 	echo "source /usr/share/autojump/autojump.sh" >> ~/.zshrc
 fi
 # auto suggestion
 if [ ! -d "/home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
-	git clone git://github.com/zsh-users/zsh-autosuggestions /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	git clone git://github.com/zsh-users/zsh-autosuggestions /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions  
 fi
 if ! grep -q "zsh-autosuggestions.zsh" ~/.zshrc; then
 	echo "source /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 fi 
+wait 
 
 ###########################################
 #############  alias commands  ############
@@ -86,6 +90,7 @@ if ! grep -q "nvw='watch" ~/.zshrc; then
 	echo "\n\n\nalias nvw='watch nvidia-smi' \nalias ll='ls -al'" >> ~/.zshrc 
 	echo "\nalias gst='git status' \nalias gpl='git pull'" >> ~/.zshrc 
 fi 
+wait 
 
 ###################
 #### start zsh ####

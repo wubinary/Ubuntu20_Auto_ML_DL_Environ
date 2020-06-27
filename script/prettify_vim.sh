@@ -9,6 +9,7 @@ NC='\033[0m' # No Color
 show(){
 	echo "\t${LCYAN}$1${NC}"
 	sleep 1
+	wait 
 }
 
 wait_apt_lock(){
@@ -38,6 +39,7 @@ download_from_gdrive() {
 #############  Default vim  ###############
 show "[Info] Install default vim config"
 echo $PASS | sudo -S apt-get -y install vim 
+wait_apt_lock()
 
 ###########################################
 ########  Download .vim/.vimrc  ###########
@@ -132,38 +134,42 @@ map <C-b> :set fileencoding=big5
 EOL
 
 ### Install bundle
-show "\t[Info] VIM PluginInstalling , it will take 5min, please wait!!"
-wait
+show "[Info] VIM PluginInstalling , it will take 5min, please wait!!"
 vim +PluginInstall +qall
 wait
 #echo ":PluginInstall" | vim 
-wait 
+#wait 
 
 ### Install YouCompleteMe
-show "\t[Info] building YouCompleteMe "
+show "[Info] building YouCompleteMe "
 echo $PASS | sudo git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
-#echo $PASS | sudo git submodule update --init --recursive 
-echo $PASS | sudo -S apt-get -y install build-essential cmake python3-dev
 wait 
+#echo $PASS | sudo git submodule update --init --recursive 
+#wait
+echo $PASS | sudo -S apt-get -y install build-essential cmake python3-dev
+wait_apt_lock()
 
-show "\t[Info] installing YouCompleteMe "
+show "[Info] installing YouCompleteMe "
 /home/$USER/.vim/bundle/YouCompleteMe/install.py --clang-completer 
 #--system-libclang 
 wait 
 
 ### copy .ycm_extra_conf
 cp ./files/.ycm_extra_conf.py /home/$USER/.vim/bundle/YouCompleteMe/ 
+wait 
 
 ### change c++ include file path of .ycm_extra_conf.py
-show "\t[Info] changing .ycm_extra_conf.py c++ include path"
+show "[Info] changing .ycm_extra_conf.py c++ include path"
 find /usr/include/c++ >> tmp.txt
+wait 
 result="$(grep '/profile/array' tmp.txt)"
 result=$(echo $result | sed 's#/profile\/array##g' )
 rm tmp.txt 
 echo "$result"
 sed -i "s#\/usr\/include\/c++\/xx#$result#g" /home/$USER/.vim/bundle/YouCompleteMe//.ycm_extra_conf.py 
 
+wait 
 
-
+show "[Info] finished install & config vim"
 
 
