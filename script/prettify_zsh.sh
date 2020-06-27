@@ -28,7 +28,7 @@ else
 	rm -rf /home/$USER/.zsh_history
 	rm -rf /home/$USER/.zshrc
 	rm -rf /home/$USER/.oh-my-zsh/
-	wget https://raw.githubusercontent.com/wubinary/Ubuntu_Auto_ML_Environ/master/files/.zshrc?token=AGA7HSMUHJWCLN6EABO4MIS67U5QA -O /home/$USER/.zshrc
+	#wget https://raw.githubusercontent.com/wubinary/Ubuntu20_Auto_ML_DL_Environ/master/files/.zshrc?token=AGA7HSPW2MNPCO6TEKDNETC7AEB6G -q --show-progress -O /home/$USER/.zshrc
 	wait 
 fi 
 
@@ -38,7 +38,7 @@ fi
 if [ ! -d "/home/$USER/.oh-my-zsh/" ]; then
 	show "[Info] Install oh-my-zsh default config"
 	rm -rf /home/$USER/.zshrc
-	wget -O tempinstall.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && echo "exit\n" | zsh tempinstall.sh
+	wget -q --show-progress -O tempinstall.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && echo "exit\n" | zsh tempinstall.sh
 	wait 
 	rm -rf tempinstall.sh
 else
