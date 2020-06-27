@@ -18,6 +18,7 @@ wait_apt_lock(){
 }
 
 echo $PASS | sudo -S apt update 
+wait_apt_lock()
 
 #############################################
 ###############  Python3.8  #################
