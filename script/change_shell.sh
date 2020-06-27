@@ -8,6 +8,7 @@ NC='\033[0m' # No Color
 show(){
 	echo "\t${LCYAN}$1${NC}"
 	sleep 1
+	wait 
 }
 
 wait_apt_lock(){
@@ -23,14 +24,15 @@ show "###### Install ZSH and change SHELL ######"
 
 ## install zsh
 show "[Info] install make zsh"
+echo $PASS | sudo -S apt-get update 
 wait_apt_lock()
-echo $PASS | sudo -S apt-get update &&
-echo $PASS | sudo -S apt-get install -y make zsh
+echo $PASS | sudo -S apt-get -y install make zsh
+wait_apt_lock()
 
 ## change shell to zsh
 show "[Info] chsh to zsh"
-wait_apt_lock()
-chsh -s /bin/zsh 
+echo $PASS | chsh -s /bin/zsh 
+wait 
 
 ## change new users default shell to zsh
 show "[Info] change /etc/adduser.conf & /etc/default/useradd"
@@ -38,15 +40,17 @@ echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/adduser
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/adduser.conf
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/default/useradd
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/default/useradd
+wait 
 
 ########################################################
 #####################  Reboot  #########################
-show "\t################################################"
-show "\t##                                            ##"
-show "\t##   [Info] Finish change shell to zsh        ##"
-show "\t##   [Info] Please Reboot !!                  ##"
-show "\t##            Thanks :)                       ##"
-show "\t##                                            ##"
-show "\t################################################"
-
+show ""
+show "################################################
+\t##                                            ##
+\t##   [Info] Finish change shell to zsh        ##
+\t##   [Info] Please Reboot !!                  ##
+\t##            Thanks :)                       ##
+\t##                                            ##
+\t################################################\n"
+wait 
 
