@@ -92,6 +92,15 @@ if ! grep -q "nvw='watch" ~/.zshrc; then
 fi 
 wait 
 
+###########################################
+##########  setting zsh prompt  ###########
+if ! grep -q "POWERLEVEL9K_LEFT_PROMPT_" ~/.zshrc; then
+	echo "\nPOWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs)\n" >> ~/.zshrc
+else
+	echo "powerlevel9k_left_prompt_elements already in setting"
+fi
+wait 
+
 ###################
 #### start zsh ####
 zsh

@@ -17,7 +17,7 @@ cuda:
 python3.8_sys:	
 	sh script/python3_sys/python3.8_sys.sh $(PASSWD)
 python3.7_anaconda:
-	sh script/python3_anaconda/python3.7_anacoda.sh $(PASSWD) 
+	sh script/python3_anaconda/python3.7_anaconda.sh $(PASSWD) 
 
 bag_tools:
 	sh script/bag_tools.sh $(PASSWD)

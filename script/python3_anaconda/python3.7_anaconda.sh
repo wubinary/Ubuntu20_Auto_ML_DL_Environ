@@ -21,39 +21,62 @@ wait_apt_lock(){
 
 #############################################
 ###############  Python3.7  #################
-
-#show "###### Install python3-pip ######"
-#echo $PASS | sudo -S apt-get -y install python3-pip
-#wait_apt_lock()
 show "[Info] Download Anaconda3 script"
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+#wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
 wait 
 
 show "[Info] Install Anaconda3"
-zsh 
+if [ ! -d /home/$USER/anaconda3 ]; then 
+	bash ./files/anaconda/Anaconda3-2020.02-Linux-x86_64.sh -b
+else
+	echo "Anaconda3 already exist in /home/$USER/anaconda3"
+	sleep 1
+fi
 wait 
 
-show "\t[Info] Install python3 base packages"
+show "[Info] add source to .zshrc & .bashrc "
+if ! grep -q "anaconda3/bin/activate" ~/.zshrc; then 
+	echo "\nsource /home/\$USER/anaconda3/bin/activate
+conda deactivate
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
+POWERLEVEL9K_ANACONDA_BACKGROUND='24'
+POWERLEVEL9K_ANACONDA_FOREGROUND='111'\n" >> ~/.zshrc
+fi 
+if ! grep -q "anaconda3/bin/activate" ~/.bashrc; then 
+	echo "\nsource /home/\$USER/anaconda3/bin/activate
+conda deactivate
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
+POWERLEVEL9K_ANACONDA_BACKGROUND='24'
+POWERLEVEL9K_ANACONDA_FOREGROUND='111'\n" >> ~/.bashrc
+fi 
+wait 
+
+show "[Info] Install python3 base packages"
 #pip3 install -r ./files/requirements_base.txt
 wait 
 
-show "\t[Info] Install python3 ml packages"
+show "[Info] Install python3 ml packages"
 #pip3 install -r ./files/requirements_ml.txt
 wait 
 
-show "\t[Info] Install python3 torch family"
+show "[Info] Install python3 torch family"
 #pip3 install -r ./files/requirements_torch.txt
 wait 
 
-show "\t[Info] Install python3 tensorflow keras family"
+show "[Info] Install python3 tensorflow keras family"
 #pip3 install -r ./files/requirements_tensorflow.txt
 wait 
 
-show "\t[Info] Install python3 others package"
+show "[Info] Install python3 others package"
 #pip3 install -r ./files/requirements_others.txt
 wait 
 
 
+##################
+###### zsh #######
+zsh 
 
 
 
