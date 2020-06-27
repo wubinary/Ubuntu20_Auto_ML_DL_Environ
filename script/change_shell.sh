@@ -35,7 +35,7 @@ echo $PASS | chsh -s /bin/zsh
 wait 
 
 ## change new users default shell to zsh
-show "[Info] change /etc/adduser.conf & /etc/default/useradd"
+show "\n\t[Info] change /etc/adduser.conf & /etc/default/useradd"
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/adduser.conf
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/adduser.conf
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/default/useradd
