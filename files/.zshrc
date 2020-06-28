@@ -110,7 +110,7 @@ alias gpl='git pull'
 source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/autojump/autojump.sh
-source /home/aa/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ##################################
 ####### POWERLEVEL9K THEME #######
@@ -148,7 +148,7 @@ POWERLEVEL9K_ANACONDA_FOREGROUND='111'
 
 POWERLEVEL9K_DATE_FORMAT='%D{%d.%m.%y}'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs newline context)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs context) #newline
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 source /home/$USER/anaconda3/bin/activate

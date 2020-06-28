@@ -48,13 +48,13 @@ fi
 ###########################################
 #################  Theme  #################
 show "[Info] Install zsh Theme"
-if ! grep -q 'TERM="xterm-256color"' ~/.zshrc; then #上色東東
-	sed -i '3iexport TERM="xterm-256color"\n' /home/$USER/.zshrc 
-fi 
 # powerline字體, powerlevel主題, zsh-syntax-higtlight高亮度顯示
 echo $PASS | sudo -S apt-get -y install powerline fonts-powerline zsh-theme-powerlevel9k zsh-syntax-highlighting
 wait_apt_lock()
-## 啟用主題
+# 啟用主題
+#if ! grep -q 'TERM="xterm-256color"' ~/.zshrc; then #上色東東
+#	sed -i '3iexport TERM="xterm-256color"\n' /home/$USER/.zshrc 
+#fi 
 #if ! grep -q "powerlevel9k.zsh-theme" ~/.zshrc; then #像mac
 #	echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
 #fi 
@@ -64,7 +64,7 @@ wait_apt_lock()
 #if ! grep -q 'ZSH_THEME="agnoster"' ~/.zshrc; then 
 #	sed -i -- 's/ZSH_THEME="robbyrussell"/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' /home/$USER/.zshrc
 #fi 
-echo $PASS | sudo -S cp -f ./files/.zshrc /home/$USER/.zshrc 
+#echo $PASS | sudo -S cp -f ./files/.zshrc /home/$USER/.zshrc 
 
 ###########################################
 #############  Other plugins  #############
@@ -77,7 +77,7 @@ if ! grep -q "autojump.sh" ~/.zshrc; then
 	echo "source /usr/share/autojump/autojump.sh" >> ~/.zshrc
 fi
 # auto suggestion
-if [ ! -d "/home/\$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
+if [ ! -d "/home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
 	git clone git://github.com/zsh-users/zsh-autosuggestions /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions  
 fi
 if ! grep -q "zsh-autosuggestions.zsh" ~/.zshrc; then
