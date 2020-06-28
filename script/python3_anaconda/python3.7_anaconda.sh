@@ -22,7 +22,10 @@ wait_apt_lock(){
 #############################################
 ###############  Python3.7  #################
 show "[Info] Download Anaconda3 script"
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+if [ ! -p ./files/anaconda ]; then 
+	mkdir -p ./files/anaconda
+	wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+fi
 wait 
 
 show "[Info] Install Anaconda3"
@@ -34,7 +37,8 @@ else
 fi
 wait
 
-rm -rf ./files/anaconda/*
+rm -rf ./files/anaconda/ 
+rmdir ./files/anaconda/
 
 ##################################################
 ####  add source anaconda to zshrc & bashrc  ####
@@ -49,9 +53,15 @@ conda deactivate\n" >> ~/.bashrc
 fi 
 wait 
 
+##############################
+# let conda deativate tmp not avaliable at zshrc
+sed -i -- "s/conda deactivate/#conda deactivate/g" ~/.zshrc 
+sed -i -- "s/##conda deactivate/#conda deactivate/g" ~/.zshrc 
+
 #########################################
 ###  activate anaconda base 
-conda activate
+conda activate  
+#conda init zsh 
 wait 
 
 show "[Info] Install python3 base packages"
@@ -74,10 +84,13 @@ show "[Info] Install python3 others package"
 pip install -r ./files/python3.7_anaconda/requirements_others.txt
 wait 
 
+##############################
+# let conda deativate at zshrc
+sed -i -- "s/#conda deactivate/conda deactivate/g" ~/.zshrc 
 
 ##################
 ###### zsh #######
-zsh 
-conda activate 
+#zsh 
+#conda activate 
 
 

@@ -1,5 +1,7 @@
-# Ubuntu-20.04 Auto (pytorch) ML server 
+# Ubuntu-20.04 Auto ML&DL server 
+###### tags: `lab` `z-tech`
 
+This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
 
 ## How to run
 ### Full Install
@@ -7,11 +9,12 @@
 - [x] zsh
 - [x] vim (ycm)
 - [x] nvidia-driver & cuda
-- [x] python3 ml enviroment (torch keras tensorflow)
+- [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
+- [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
-> git clone https://github.com/wubinary/Ubuntu_Auto_ML_Environ.git
+> git clone https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ.git
 > cd Ubuntu_Auto_ML_Environ
 
 # change shell
@@ -35,11 +38,12 @@
 - [ ] zsh
 - [ ] vim (ycm)
 - [x] nvidia-driver & cuda
-- [x] python3 ml enviroment (torch keras tensorflow)
+- [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
+- [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
-> git clone https://github.com/wubinary/Ubuntu_Auto_ML_Environ.git
+> git clone https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ.git
 > cd ./Ubuntu_Auto_ML_Environ
 
 # install nvidia-driver
@@ -88,15 +92,88 @@
     - memory commands typed before and recommend command when you type.
     
 ![](https://i.imgur.com/CiznVLZ.png)
+![](https://i.imgur.com/EqMaLl0.gif)
+
 
 ## VIM (YCM)
 * [YCM (You Complete Me)](https://github.com/ycm-core/YouCompleteMe)
 
 ![](https://i.imgur.com/3eq2Nnu.gif)
 python3 & c/c++ prompt word
+
 ![](https://i.imgur.com/A077MSN.gif)
 c/c++: [ESC] auto grammar test
 
+## System python3.8 packages installed
+```=
+# base
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+beautifulsoup4
+
+# ML
+scikit-learn
+xgboost
+fasttext
+gensim
+
+# pytorch
+torch==1.5.1
+torchvision
+torchaudio
+torchsummary
+transformers
+
+# tensorflow
+tensorflow-gpu==2.2.0
+keras
+
+# others
+opencv-python
+opencv-contrib-python
+visdom
+wandb
+Flask-SQLAlchemy
+Django
+```
+## Anaconda python3.7 packages installed
+```=
+# base
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+beautifulsoup4
+
+# ML
+scikit-learn
+xgboost
+fasttext
+gensim
+
+# pytorch
+torch==1.5.1
+torchvision
+torchaudio
+torchsummary
+transformers
+
+# tensorflow
+tensorflow-gpu==2.2.0
+keras
+
+# others
+opencv-python
+opencv-contrib-python
+visdom
+wandb
+Flask-SQLAlchemy
+Django
+```
 
 # Other auto install scripts
 ## Disk quota
@@ -110,4 +187,21 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 ```=
 => [shift] + right mouse click = paste
 ```
+### where is my python3
+1. system python3.8
+![](https://i.imgur.com/V4KocVp.png)
+2. anaconda python3.7 if activated
+![](https://i.imgur.com/SSYvZ8K.png)
+### where is my pip&pip3
+1. pip3 : system 
+![](https://i.imgur.com/FrwFe90.png)
+2. pip : anaconda
+![](https://i.imgur.com/AyrHnuM.png)
+
+### powerline font on windows 8.10 not render perfect
+![](https://i.imgur.com/WcaX5Ik.png)
+[[download dejavu font]](https://dejavu-fonts.github.io/Download.html)
+install DejaVuSans.ttf or DejaVuSansMono.ttf
+
+
 
