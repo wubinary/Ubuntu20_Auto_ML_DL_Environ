@@ -1,3 +1,6 @@
+opencv-python
+opencv-contrib-python
+
 visdom
 wandb
 Flask-SQLAlchemy
