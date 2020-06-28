@@ -27,28 +27,23 @@ echo $PASS | sudo -S apt-get -y install python3-pip
 wait_apt_lock()
 
 show "\t[Info] Install python3 base packages"
-echo $PASS | sudo -H pip3 install -r ./files/requirements_base.txt
+echo $PASS | sudo -H pip3 install -r ./files/python3.8_system/requirements_base.txt
 wait 
 
 show "\t[Info] Install python3 ml packages"
-echo $PASS | sudo -H pip3 install -r ./files/requirements_ml.txt
+echo $PASS | sudo -H pip3 install -r ./files/python3.8_system/requirements_ml.txt
 wait 
 
 show "\t[Info] Install python3 torch family"
-echo $PASS | sudo -H pip3 install -r ./files/requirements_torch.txt
+echo $PASS | sudo -H pip3 install -r ./files/python3.8_system/requirements_torch.txt
 wait 
 
 show "\t[Info] Install python3 tensorflow keras family"
-echo $PASS | sudo -H pip3 install -r ./files/requirements_tensorflow.txt
+echo $PASS | sudo -H pip3 install -r ./files/python3.8_system/requirements_tensorflow.txt
 wait 
 
 show "\t[Info] Install python3 others package"
-echo $PASS | sudo -H pip3 install -r ./files/requirements_others.txt
+echo $PASS | sudo -H pip3 install -r ./files/python3.8_system/requirements_others.txt
 wait 
-
-
-
-
-
 
 
