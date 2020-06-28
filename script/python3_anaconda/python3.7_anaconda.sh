@@ -22,7 +22,7 @@ wait_apt_lock(){
 #############################################
 ###############  Python3.7  #################
 show "[Info] Download Anaconda3 script"
-#wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
 wait 
 
 show "[Info] Install Anaconda3"
@@ -32,7 +32,9 @@ else
 	echo "Anaconda3 already exist in /home/$USER/anaconda3"
 	sleep 1
 fi
-wait 
+wait
+
+rm -rf ./files/anaconda/*
 
 ##################################################
 ####  add source anaconda to zshrc & bashrc  ####
