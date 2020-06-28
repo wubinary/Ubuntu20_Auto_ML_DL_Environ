@@ -54,16 +54,17 @@ fi
 # powerline字體, powerlevel主題, zsh-syntax-higtlight高亮度顯示
 echo $PASS | sudo -S apt-get -y install powerline fonts-powerline zsh-theme-powerlevel9k zsh-syntax-highlighting
 wait_apt_lock()
-# 啟用主題
-if ! grep -q "powerlevel9k.zsh-theme" ~/.zshrc; then #像mac
-	echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
-fi 
-if ! grep -q "zsh-syntax-highlighting.zsh" ~/.zshrc; then #幫cmd上色
-	echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
-fi
-if ! grep -q 'ZSH_THEME="agnoster"' ~/.zshrc; then 
-	sed -i -- 's/ZSH_THEME="robbyrussell"/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' /home/$USER/.zshrc
-fi 
+## 啟用主題
+#if ! grep -q "powerlevel9k.zsh-theme" ~/.zshrc; then #像mac
+#	echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+#fi 
+#if ! grep -q "zsh-syntax-highlighting.zsh" ~/.zshrc; then #幫cmd上色
+#	echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+#fi
+#if ! grep -q 'ZSH_THEME="agnoster"' ~/.zshrc; then 
+#	sed -i -- 's/ZSH_THEME="robbyrussell"/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' /home/$USER/.zshrc
+#fi 
+echo $PASS | sudo -S cp -f ./files/.zshrc /home/$USER/.zshrc 
 
 ###########################################
 #############  Other plugins  #############

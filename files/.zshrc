@@ -12,6 +12,7 @@ export ZSH="/home/aa/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
+#ZSH_THEME="powerlevel9k/powerlevel9k" 
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,15 +101,56 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/autojump/autojump.sh
-source /home/aa/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-
 alias nvw='watch nvidia-smi' 
 alias ll='ls -al'
 
 alias gst='git status' 
 alias gpl='git pull'
+	
+source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/autojump/autojump.sh
+source /home/aa/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+
+##################################
+####### POWERLEVEL9K THEME #######
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='24'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='111'
+POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='24'
+POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='111'
+POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND='24'
+POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND='111'
+POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND='24'
+POWERLEVEL9K_CONTEXT_REMOTE_SUDO_FOREGROUND='111'
+POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND='24'
+POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND='111'
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n@`hostname -f` >"
+
+POWERLEVEL9K_DIR_HOME_BACKGROUND='24'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='111'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='24'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='111'
+POWERLEVEL9K_DIR_ETC_BACKGROUND='24'
+POWERLEVEL9K_DIR_ETC_FOREGROUND='111'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='24'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='111'
+
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
+POWERLEVEL9K_ANACONDA_BACKGROUND='27'
+POWERLEVEL9K_ANACONDA_FOREGROUND='111'
+
+#POWERLEVEL9K_VCS_GIT_ICON='\uf1d3'
+#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uf09b'
+
+POWERLEVEL9K_DATE_FORMAT='%D{%d.%m.%y}'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs newline context)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+
+source /home/$USER/anaconda3/bin/activate
+conda deactivate
+	
