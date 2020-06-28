@@ -91,7 +91,6 @@ This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1
 * [zsh-autosugestions](https://github.com/zsh-users/zsh-autosuggestions)
     - memory commands typed before and recommend command when you type.
     
-![](https://i.imgur.com/CiznVLZ.png)
 ![](https://i.imgur.com/EqMaLl0.gif)
 
 
