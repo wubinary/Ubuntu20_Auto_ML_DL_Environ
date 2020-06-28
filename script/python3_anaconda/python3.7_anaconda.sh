@@ -34,6 +34,8 @@ else
 fi
 wait 
 
+##################################################
+####  add source anaconda to zshrc & bashrc  ####
 show "[Info] add source to .zshrc & .bashrc "
 if ! grep -q "anaconda3/bin/activate" ~/.zshrc; then 
 	echo "\nsource /home/\$USER/anaconda3/bin/activate
@@ -45,32 +47,35 @@ conda deactivate\n" >> ~/.bashrc
 fi 
 wait 
 
+#########################################
+###  activate anaconda base 
+conda activate
+wait 
+
 show "[Info] Install python3 base packages"
-#pip3 install -r ./files/requirements_base.txt
+pip install -r ./files/requirements_base.txt
 wait 
 
 show "[Info] Install python3 ml packages"
-#pip3 install -r ./files/requirements_ml.txt
+pip install -r ./files/requirements_ml.txt
 wait 
 
 show "[Info] Install python3 torch family"
-#pip3 install -r ./files/requirements_torch.txt
+pip install -r ./files/requirements_torch.txt
 wait 
 
 show "[Info] Install python3 tensorflow keras family"
-#pip3 install -r ./files/requirements_tensorflow.txt
+pip install -r ./files/requirements_tensorflow.txt
 wait 
 
 show "[Info] Install python3 others package"
-#pip3 install -r ./files/requirements_others.txt
+pip install -r ./files/requirements_others.txt
 wait 
 
 
 ##################
 ###### zsh #######
 zsh 
-
-
-
+conda activate 
 
 
