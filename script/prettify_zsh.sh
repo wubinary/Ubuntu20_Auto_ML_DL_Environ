@@ -64,7 +64,7 @@ wait_apt_lock()
 #if ! grep -q 'ZSH_THEME="agnoster"' ~/.zshrc; then 
 #	sed -i -- 's/ZSH_THEME="robbyrussell"/#ZSH_THEME="robbyrussell"\nZSH_THEME="agnoster"/g' /home/$USER/.zshrc
 #fi 
-#echo $PASS | sudo -S cp -f ./files/.zshrc /home/$USER/.zshrc 
+echo $PASS | sudo -S cp -f ./files/.zshrc /home/$USER/.zshrc 
 
 ###########################################
 #############  Other plugins  #############
