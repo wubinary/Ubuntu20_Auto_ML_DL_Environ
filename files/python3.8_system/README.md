@@ -34,5 +34,6 @@ visdom
 wandb
 Flask-SQLAlchemy
 Django
+schedule
 ```
 

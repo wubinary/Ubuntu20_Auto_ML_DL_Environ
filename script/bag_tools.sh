@@ -68,8 +68,8 @@ wait_apt_lock()
 
 
 # 安裝 tmux net-tools lm-sensors
-show "[Info] Install tmux net-tools lm-sensors htop curl"
-echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors htop curl
+show "[Info] Install tmux net-tools lm-sensors htop curl docker.io"
+echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors htop curl docker.io
 wait_apt_lock()
 
 # 安裝 gdrive
