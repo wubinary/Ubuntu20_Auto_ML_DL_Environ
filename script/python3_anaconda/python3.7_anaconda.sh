@@ -53,23 +53,23 @@ conda activate
 wait 
 
 show "[Info] Install python3 base packages"
-pip install -r ./files/requirements_base.txt
+pip install -r ./files/python3.7_anaconda/requirements_base.txt
 wait 
 
 show "[Info] Install python3 ml packages"
-pip install -r ./files/requirements_ml.txt
+pip install -r ./files/python3.7_anaconda/requirements_ml.txt
 wait 
 
 show "[Info] Install python3 torch family"
-pip install -r ./files/requirements_torch.txt
+pip install -r ./files/python3.7_anaconda/requirements_torch.txt
 wait 
 
 show "[Info] Install python3 tensorflow keras family"
-pip install -r ./files/requirements_tensorflow.txt
+pip install -r ./files/python3.7_anaconda/requirements_tensorflow.txt
 wait 
 
 show "[Info] Install python3 others package"
-pip install -r ./files/requirements_others.txt
+pip install -r ./files/python3.7_anaconda/requirements_others.txt
 wait 
 
 
