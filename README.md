@@ -1,4 +1,5 @@
-# Ubuntu-20.04 Auto ML&DL server 
+# Ubuntu-20.04 Auto ML&DL server 💪
+
 ###### tags: `lab` `z-tech`
 ![](https://img.shields.io/static/v1?label=Ubuntu&message=20.04&color=purple)
 ![](https://img.shields.io/static/v1?label=python&message=3.7|3.8&color=blue)
@@ -66,7 +67,7 @@
 ### finished, nice ball :) ###
 ```
 ---
-# Features
+# Features 😍 ⭐ 🥳 ⭐ 😁
 
 ### ZSH Plugins
 * [oh-my-zsh](https://)
@@ -118,11 +119,11 @@ c/c++: [ESC] auto grammar test
 
 
 ---
-# Additional auto install scripts
+# Additional auto install scripts 🥱 🎉
 ### Disk quota
 
 ---
-# Problem shooting
+# Problem shooting 😨 😭 
 ### install cuda: NO_PUBLICKEY F60F4B3D7FA2AF80
 ```=
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
