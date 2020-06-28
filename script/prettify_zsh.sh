@@ -76,11 +76,11 @@ if ! grep -q "autojump.sh" ~/.zshrc; then
 	echo "source /usr/share/autojump/autojump.sh" >> ~/.zshrc
 fi
 # auto suggestion
-if [ ! -d "/home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
+if [ ! -d "/home/\$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
 	git clone git://github.com/zsh-users/zsh-autosuggestions /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions  
 fi
 if ! grep -q "zsh-autosuggestions.zsh" ~/.zshrc; then
-	echo "source /home/$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+	echo "source /home/\$USER/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 fi 
 wait 
 

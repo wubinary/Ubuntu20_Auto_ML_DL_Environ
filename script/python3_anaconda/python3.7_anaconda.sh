@@ -37,19 +37,11 @@ wait
 show "[Info] add source to .zshrc & .bashrc "
 if ! grep -q "anaconda3/bin/activate" ~/.zshrc; then 
 	echo "\nsource /home/\$USER/anaconda3/bin/activate
-conda deactivate
-POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
-POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
-POWERLEVEL9K_ANACONDA_BACKGROUND='24'
-POWERLEVEL9K_ANACONDA_FOREGROUND='111'\n" >> ~/.zshrc
+conda deactivate\n" >> ~/.zshrc
 fi 
 if ! grep -q "anaconda3/bin/activate" ~/.bashrc; then 
 	echo "\nsource /home/\$USER/anaconda3/bin/activate
-conda deactivate
-POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER='>'
-POWERLEVEL9K_ANACONDA_LEFT_DELIMITER='<'
-POWERLEVEL9K_ANACONDA_BACKGROUND='24'
-POWERLEVEL9K_ANACONDA_FOREGROUND='111'\n" >> ~/.bashrc
+conda deactivate\n" >> ~/.bashrc
 fi 
 wait 
 
