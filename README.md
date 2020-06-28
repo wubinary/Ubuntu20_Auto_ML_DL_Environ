@@ -1,9 +1,16 @@
 # Ubuntu-20.04 Auto ML&DL server 
 ###### tags: `lab` `z-tech`
+![](https://img.shields.io/static/v1?label=Ubuntu&message=20.04&color=purple)
+![](https://img.shields.io/static/v1?label=python&message=3.7|3.8&color=blue)
+![](https://img.shields.io/static/v1?label=pytorch&message=1.5&color=orange)
+![](https://img.shields.io/static/v1?label=tensorflow&message=2.2.0&color=orange)
+![](https://img.shields.io/static/v1?label=shell&message=zsh&color=green)
+![](https://img.shields.io/static/v1?label=shell&message=vim&color=green)
 
-This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
+### Intro
+>This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
 
-## How to run
+## How to run 💡
 ### Full Install
 - [x] bag tools
 - [x] zsh
@@ -58,16 +65,32 @@ This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1
 
 ### finished, nice ball :) ###
 ```
-
+---
 # Features
-1. bag tools
-2. zsh
-3. vim ycm (c/c++ ; python)
-4. python env
-    - nvidia-driver 440
-    - cuda 10.2
-    - system python3.8 & anaconda python3.7
-## Bag tools
+
+### ZSH Plugins
+* [oh-my-zsh](https://)
+    - with git tools
+* [powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
+* [zsh-syntax-hightligh](https://github.com/zsh-users/zsh-syntax-highlighting)
+    - colorfy multiple commands.
+* [zsh-autosugestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - memory commands typed before and recommend command when you type.
+    
+![](https://i.imgur.com/CiznVLZ.png)
+![](https://i.imgur.com/EqMaLl0.gif)
+
+
+### VIM (YCM)
+* [YCM (You Complete Me)](https://github.com/ycm-core/YouCompleteMe)
+
+![](https://i.imgur.com/3eq2Nnu.gif)
+python3 & c/c++ prompt word
+
+![](https://i.imgur.com/A077MSN.gif)
+c/c++: [ESC] auto grammar test
+
+### Bag tools
 ```
 - tools
     - tmux 
@@ -82,101 +105,23 @@ This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1
     - start ufw firewall
 ```
 
-## ZSH Plugins
-* [oh-my-zsh](https://)
-    - with git tools
-* [powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
-* [zsh-syntax-hightligh](https://github.com/zsh-users/zsh-syntax-highlighting)
-    - colorfy multiple commands.
-* [zsh-autosugestions](https://github.com/zsh-users/zsh-autosuggestions)
-    - memory commands typed before and recommend command when you type.
-    
-![](https://i.imgur.com/EqMaLl0.gif)
+### Nvidia & Cuda
+* nvidia-driver 440
+* cuda 10.2
+* system python3.8 & anaconda python3.7
+
+### System python3.8 packages installed
+[->See Installed packages](https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ/tree/master/files/python3.8_system)
+
+### Anaconda python3.7 packages installed
+[->See Installed packages](https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ/tree/master/files/python3.7_anaconda)
 
 
-## VIM (YCM)
-* [YCM (You Complete Me)](https://github.com/ycm-core/YouCompleteMe)
+---
+# Additional auto install scripts
+### Disk quota
 
-![](https://i.imgur.com/3eq2Nnu.gif)
-python3 & c/c++ prompt word
-
-![](https://i.imgur.com/A077MSN.gif)
-c/c++: [ESC] auto grammar test
-
-## System python3.8 packages installed
-```=
-# base
-numpy
-pandas
-matplotlib
-seaborn
-tqdm
-beautifulsoup4
-
-# ML
-scikit-learn
-xgboost
-fasttext
-gensim
-
-# pytorch
-torch==1.5.1
-torchvision
-torchaudio
-torchsummary
-transformers
-
-# tensorflow
-tensorflow-gpu==2.2.0
-keras
-
-# others
-opencv-python
-opencv-contrib-python
-visdom
-wandb
-Flask-SQLAlchemy
-Django
-```
-## Anaconda python3.7 packages installed
-```=
-# base
-numpy
-pandas
-matplotlib
-seaborn
-tqdm
-beautifulsoup4
-
-# ML
-scikit-learn
-xgboost
-fasttext
-gensim
-
-# pytorch
-torch==1.5.1
-torchvision
-torchaudio
-torchsummary
-transformers
-
-# tensorflow
-tensorflow-gpu==2.2.0
-keras
-
-# others
-opencv-python
-opencv-contrib-python
-visdom
-wandb
-Flask-SQLAlchemy
-Django
-```
-
-# Other auto install scripts
-## Disk quota
-
+---
 # Problem shooting
 ### install cuda: NO_PUBLICKEY F60F4B3D7FA2AF80
 ```=
