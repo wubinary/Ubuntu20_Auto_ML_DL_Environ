@@ -19,6 +19,7 @@
 - [x] nvidia-driver & cuda
 - [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
 - [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
+- [x] user skel copy
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
@@ -48,6 +49,7 @@
 - [x] nvidia-driver & cuda
 - [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
 - [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
+- [ ] user skel copy
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
