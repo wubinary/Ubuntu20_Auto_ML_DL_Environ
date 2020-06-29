@@ -15,6 +15,7 @@ wait_apt_lock(){
 	while sudo fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock >/dev/null 2>&1; do
 		sleep 1
 	done
+	wait 
 }
 
 #echo $PASS | sudo -S apt update 
@@ -24,7 +25,7 @@ wait_apt_lock(){
 show "[Info] Download Anaconda3 script"
 if [ ! -p ./files/anaconda ]; then 
 	mkdir -p ./files/anaconda
-	wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+	#wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
 fi
 wait 
 
@@ -58,8 +59,13 @@ wait
 sed -i -- "s/conda deactivate/#conda deactivate/g" ~/.zshrc 
 sed -i -- "s/##conda deactivate/#conda deactivate/g" ~/.zshrc 
 
+#sleep 30
+wait 
+
 #########################################
-###  activate anaconda base 
+###  activate anaconda base
+#source /home/$USER/.zshrc 
+#wait
 conda activate  
 #conda init zsh 
 wait 
@@ -93,4 +99,5 @@ sed -i -- "s/#conda deactivate/conda deactivate/g" ~/.zshrc
 #zsh 
 #conda activate 
 
+wait 
 

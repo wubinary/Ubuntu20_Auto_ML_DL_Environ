@@ -9,16 +9,18 @@ nvidia_driver:
 	sh script/nvidia_driver.sh $(PASSWD)
 
 ### main scripts
-light: install cuda python3.8_sys bag_tools 
-main: install_cuda python3.8_sys bat_tools prettify_zsh prettify_vim
+light: python3_env bag_tools 
+full: python3_env remain_works 
 
+python3_env: cuda python3.8_sys python3.7_anaconda 
 cuda:
 	sh script/cuda.sh $(PASSWD)
 python3.8_sys:	
 	sh script/python3_sys/python3.8_sys.sh $(PASSWD)
 python3.7_anaconda:
-	sh script/python3_anaconda/python3.7_anaconda.sh $(PASSWD) 
+	zsh -i script/python3_anaconda/python3.7_anaconda.sh $(PASSWD) 
 
+remain_works: bag_tools prettify_zsh prettify_vim 
 bag_tools:
 	sh script/bag_tools.sh $(PASSWD)
 prettify_zsh:

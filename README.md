@@ -12,7 +12,7 @@
 >This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
 
 ## How to run 💡
-### Full Install
+### Full Install (ok to run)
 - [x] bag tools
 - [x] zsh
 - [x] vim (ycm)
@@ -23,7 +23,7 @@
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
 > git clone https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ.git
-> cd Ubuntu_Auto_ML_Environ
+> cd Ubuntu20_Auto_ML_DL_Environ
 
 # change shell
 > make change_shell PASSWD=[passwd]
@@ -37,11 +37,11 @@
 > nvidia-smi
 
 # install remains
-> make main PASSWD=[passwd]  
+> make full PASSWD=[passwd]  
 
 ### finished, nice ball :) ###
 ``` 
-### Light Install
+### ~~Light Install~~ (still some problem)
 - [x] bag tools
 - [ ] zsh
 - [ ] vim (ycm)
@@ -52,7 +52,7 @@
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
 > git clone https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ.git
-> cd ./Ubuntu_Auto_ML_Environ
+> cd Ubuntu20_Auto_ML_DL_Environ
 
 # install nvidia-driver
 > make nvidia_driver PASSWD=[passwd]
@@ -98,6 +98,7 @@ c/c++: [ESC] auto grammar test
     - htop
     - curl
     - net-tools
+    - docker.io
     - gcc/g++
     - apache2
     - openssh

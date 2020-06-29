@@ -17,6 +17,7 @@ wait_apt_lock(){
 	while sudo fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock >/dev/null 2>&1; do
 		sleep 1
 	done
+	wait 
 }
 
 ###########################################
@@ -61,11 +62,12 @@ echo "$USER @ $HOST"
 echo $PASS | sudo -S sed -i -- "s#hostname#$HOST#g" /etc/update-motd.d/myMotd 
 echo $PASS | sudo -S sed -i -- "s#username#$USER#g" /etc/update-motd.d/myMotd 
 
+wait_apt_lock()
+
 # 安裝 motd.d 用到的套件 figlet boxes
 show "[Info] Install motd.d used packages: figlet boxes"
 echo $PASS | sudo -S apt-get -y install figlet boxes
 wait_apt_lock()
-
 
 # 安裝 tmux net-tools lm-sensors
 show "[Info] Install tmux net-tools lm-sensors htop curl docker.io"
@@ -88,4 +90,5 @@ wait_apt_lock()
 show "[Info] finished bag tools "
 show ""
 
+wait 
 

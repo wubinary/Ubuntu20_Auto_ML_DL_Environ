@@ -14,6 +14,7 @@ wait_apt_lock(){
 	while sudo fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock >/dev/null 2>&1; do
 		sleep 1
 	done
+	wait 
 }
 
 ###########################################
@@ -71,4 +72,6 @@ show "\t##   [Info]	Please Reboot !!                 ##"
 show "\t##           Thanks :)                       ##"
 show "\t##                                           ##"
 show "\t###############################################"
+
+wait 
 

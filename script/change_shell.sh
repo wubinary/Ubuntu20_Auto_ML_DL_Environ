@@ -15,6 +15,7 @@ wait_apt_lock(){
 	while sudo fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock >/dev/null 2>&1; do
 		sleep 1
 	done
+	wait 
 }
 
 ###########################################
@@ -40,6 +41,7 @@ echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/adduser
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/adduser.conf
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/sh#DSHELL=/bin/zsh#g' /etc/default/useradd
 echo $PASS | sudo -S sed -i -- 's#DSHELL=/bin/bash#DSHELL=/bin/zsh#g' /etc/default/useradd
+
 wait 
 
 ########################################################

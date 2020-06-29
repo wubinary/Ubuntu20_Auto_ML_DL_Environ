@@ -148,7 +148,8 @@ POWERLEVEL9K_ANACONDA_FOREGROUND='111'
 
 POWERLEVEL9K_DATE_FORMAT='%D{%d.%m.%y}'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs newline context) #newline
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv vcs newline context) #newline
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs newline context) #newline
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 source /home/$USER/anaconda3/bin/activate
