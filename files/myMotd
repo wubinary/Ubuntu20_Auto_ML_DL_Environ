@@ -2,7 +2,7 @@
 export TERM=xterm-256color
 
 echo $(tput setaf 2)
-figlet username @ hostname
+figlet aa @ lab183
 
 upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 secs=$((${upSeconds}%60))
@@ -18,9 +18,8 @@ echo "$(tput setaf 3)
  `date +"%A, %e %B %Y, %r"`
  `uname -srmo`$(tput setaf 6)
  Uptime.............: ${UPTIME}
- Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)
  Running Processes..: `ps ax | wc -l | tr -d " "`
  IP Addresses.......: `ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/` and `wget -q -O - http://icanhazip.com/ | tail`
 $(tput sgr0)"
 
-printf ""
+
