@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/aa/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
