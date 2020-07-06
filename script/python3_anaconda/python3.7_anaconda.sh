@@ -25,7 +25,7 @@ wait_apt_lock(){
 show "[Info] Download Anaconda3 script"
 if [ ! -p ./files/anaconda ]; then 
 	mkdir -p ./files/anaconda
-	#wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
+	wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -q --show-progress -P ./files/anaconda/
 fi
 wait 
 
