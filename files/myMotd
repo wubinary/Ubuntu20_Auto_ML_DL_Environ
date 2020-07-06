@@ -2,7 +2,7 @@
 export TERM=xterm-256color
 
 echo $(tput setaf 2)
-figlet aa @ lab183
+figlet username @ hostname
 
 upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 secs=$((${upSeconds}%60))
