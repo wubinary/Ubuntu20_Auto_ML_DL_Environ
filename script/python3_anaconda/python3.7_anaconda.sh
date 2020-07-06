@@ -64,8 +64,8 @@ wait
 
 #########################################
 ###  activate anaconda base
-#source /home/$USER/.zshrc 
-#wait
+source /home/$USER/.zshrc 
+wait
 conda activate  
 #conda init zsh 
 wait 
