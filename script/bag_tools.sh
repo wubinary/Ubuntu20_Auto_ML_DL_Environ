@@ -70,8 +70,8 @@ echo $PASS | sudo -S apt-get -y install figlet boxes
 wait_apt_lock()
 
 # 安裝 tmux net-tools lm-sensors
-show "[Info] Install tmux net-tools lm-sensors htop curl docker.io"
-echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors htop curl docker.io
+show "[Info] Install tmux net-tools lm-sensors htop curl docker.io tree"
+echo $PASS | sudo -S apt-get -y install tmux net-tools lm-sensors htop curl docker.io tree
 wait_apt_lock()
 
 # 安裝 gdrive
