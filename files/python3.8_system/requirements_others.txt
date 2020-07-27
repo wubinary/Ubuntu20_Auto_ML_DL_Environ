@@ -7,4 +7,5 @@ Flask-SQLAlchemy
 Django
 
 schedule
+cython
 
