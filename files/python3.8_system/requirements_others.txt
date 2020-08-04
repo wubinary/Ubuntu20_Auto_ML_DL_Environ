@@ -8,4 +8,5 @@ Django
 
 schedule
 cython
+python3-venv
 
