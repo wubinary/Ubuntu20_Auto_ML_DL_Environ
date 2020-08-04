@@ -24,7 +24,7 @@ wait_apt_lock()
 #############################################
 ###############  Python3.8  #################
 show "###### Install python3-pip ######"
-echo $PASS | sudo -S apt-get -y install python3-pip
+echo $PASS | sudo -S apt-get -y install python3-pip python3-venv
 wait_apt_lock()
 
 show "\t[Info] Install python3 base packages"
