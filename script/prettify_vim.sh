@@ -135,7 +135,7 @@ map <C-b> :set fileencoding=big5
 EOL
 
 ### Install bundle
-show "[Info] VIM PluginInstalling , it will take 5min, please wait!!"
+show "[Info] VIM PluginInstalling , it will take 5-10min, please wait!!"
 vim +PluginInstall +qall
 wait
 #echo ":PluginInstall" | vim 
