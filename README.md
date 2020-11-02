@@ -82,7 +82,7 @@
     - memory commands typed before and recommend command when you type.
     
 ![](https://i.imgur.com/CiznVLZ.png)
-![](https://i.imgur.com/EqMaLl0.gif)
+![](https://i.imgur.com/ZRJLJDd.gif)
 
 
 ### VIM (YCM)
