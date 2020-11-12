@@ -152,5 +152,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 [[download dejavu font]](https://dejavu-fonts.github.io/Download.html)
 install DejaVuSans.ttf or DejaVuSansMono.ttf
 
+### ssh welcome page so slow
+https://jrs-s.net/2017/07/01/slow-ssh-logins/
 
 
