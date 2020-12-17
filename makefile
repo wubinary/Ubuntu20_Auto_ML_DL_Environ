@@ -10,7 +10,7 @@ nvidia_driver:
 
 ### main scripts
 light: python3_env bag_tools 
-full: python3_env remain_works 
+full: python3_env remain_works zsh 
 
 python3_env: cuda python3.8_sys python3.7_anaconda 
 cuda:
@@ -29,5 +29,6 @@ prettify_vim:
 	sh script/prettify_vim.sh $(PASSWD)	
 user_skel:
 	sh script/user_skel.sh $(PASSWD)
-
+zsh:
+	sh script/zsh.sh 
 

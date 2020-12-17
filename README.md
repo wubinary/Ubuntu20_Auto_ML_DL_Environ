@@ -1,6 +1,5 @@
 # Ubuntu-20.04 Auto ML&DL server 💪
 
-
 ###### tags: `lab` `z-tech`
 ![](https://img.shields.io/static/v1?label=Ubuntu&message=20.04&color=purple)
 ![](https://img.shields.io/static/v1?label=python&message=3.7|3.8&color=blue)
@@ -10,17 +9,17 @@
 ![](https://img.shields.io/static/v1?label=shell&message=vim&color=green)
 
 ### Intro
->This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.5.1 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
+>This repo is for installing ML&DL enviroment for Ubuntu-20.04, with pytorch1.4.0 tensorflow2.2.0 keras, futhermore vim zshell usefull plugins are installed too.
 
 ## How to run 💡
 ### Full Install (ok to run)
 - [x] bag tools
 - [x] zsh
 - [x] vim (ycm)
+- [x] user skel copy
 - [x] nvidia-driver & cuda
 - [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
 - [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
-- [x] user skel copy
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
@@ -32,6 +31,7 @@
 [reboot]
 
 # install nvidia-driver
+> cd Ubuntu20_Auto_ML_DL_Environ
 > make nvidia_driver PASSWD=[passwd]
 [reboot]
 
@@ -39,6 +39,7 @@
 > nvidia-smi
 
 # install remains
+> cd Ubuntu20_Auto_ML_DL_Environ
 > make full PASSWD=[passwd]  
 
 ### finished, nice ball :) ###
@@ -47,10 +48,10 @@
 - [x] bag tools
 - [ ] zsh
 - [ ] vim (ycm)
+- [ ] user skel copy
 - [x] nvidia-driver & cuda
 - [x] system python3.8 ml&dl enviroment (pytorch keras tensorflow)
 - [x] anaconda python3.7 ml&dl enviroment (pytorch keras tensorflow)
-- [ ] user skel copy
 ```cmd
 # install git,make & clone repo
 > sudo apt-get update && sudo apt-get install make git
@@ -82,7 +83,7 @@
     - memory commands typed before and recommend command when you type.
     
 ![](https://i.imgur.com/CiznVLZ.png)
-![](https://i.imgur.com/ZRJLJDd.gif)
+![](https://i.imgur.com/EqMaLl0.gif)
 
 
 ### VIM (YCM)
@@ -121,38 +122,42 @@ c/c++: [ESC] auto grammar test
 ### Anaconda python3.7 packages installed
 [->See Installed packages](https://github.com/wubinary/Ubuntu20_Auto_ML_DL_Environ/tree/master/files/python3.7_anaconda)
 
-
 ---
-# Additional auto install scripts 🥱 🎉
-### Disk quota
+# ~~Additional auto install scripts 🥱 🎉~~
+### ~~Disk quota~~
 
 ---
 # Problem shooting 😨 😭 
-### install cuda: NO_PUBLICKEY F60F4B3D7FA2AF80
+### 1. powerline font on windows 8.10 not support perfect
+![](https://i.imgur.com/WcaX5Ik.png)
+>[[download dejavu font]](https://dejavu-fonts.github.io/Download.html)
+>install DejaVuSans.ttf or DejaVuSansMono.ttf
+
+### 2. powerline font on ubuntu18&20 not support perfect
+![](https://i.imgur.com/MDl9ccE.png)
+>Install the powerline font: [https://github.com/powerline/fonts](https://github.com/powerline/fonts)
+>change font to "Ubuntu Mono derivative Powerline Regular"
+>![](https://i.imgur.com/KsbvAmr.png)
+
+### 3. install cuda: NO_PUBLICKEY F60F4B3D7FA2AF80
 ```=
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 ```
-### vim mode can't past clipboard
+
+### 4. vim mode can't past clipboard
 ```=
 => [shift] + right mouse click = paste
 ```
-### where is my python3
+
+### 5. where is my python3
 1. system python3.8
 ![](https://i.imgur.com/V4KocVp.png)
 2. anaconda python3.7 if activated
 ![](https://i.imgur.com/SSYvZ8K.png)
-### where is my pip&pip3
+
+### 6. where is my pip & pip3
 1. pip3 : system 
 ![](https://i.imgur.com/FrwFe90.png)
 2. pip : anaconda
 ![](https://i.imgur.com/AyrHnuM.png)
-
-### powerline font on windows 8.10 not render perfect
-![](https://i.imgur.com/WcaX5Ik.png)
-[[download dejavu font]](https://dejavu-fonts.github.io/Download.html)
-install DejaVuSans.ttf or DejaVuSansMono.ttf
-
-### ssh welcome page so slow
-https://jrs-s.net/2017/07/01/slow-ssh-logins/
-
 
