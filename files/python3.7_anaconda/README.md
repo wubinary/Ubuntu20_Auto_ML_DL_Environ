@@ -17,7 +17,7 @@ fasttext
 gensim
 
 # pytorch
-torch==1.5.1
+torch==1.4.0
 torchvision
 torchaudio
 torchsummary
