@@ -82,9 +82,8 @@
 * [zsh-autosugestions](https://github.com/zsh-users/zsh-autosuggestions)
     - memory commands typed before and recommend command when you type.
     
-![](https://i.imgur.com/CiznVLZ.png)
-![](https://i.imgur.com/EqMaLl0.gif)
-
+![](https://i.imgur.com/xMxqDAc.png)
+![](https://i.imgur.com/WViNr2h.gif)
 
 ### VIM (YCM)
 * [YCM (You Complete Me)](https://github.com/ycm-core/YouCompleteMe)
@@ -160,4 +159,3 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 ![](https://i.imgur.com/FrwFe90.png)
 2. pip : anaconda
 ![](https://i.imgur.com/AyrHnuM.png)
-
