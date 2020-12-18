@@ -62,6 +62,10 @@ echo "$USER @ $HOST"
 echo $PASS | sudo -S sed -i -- "s#hostname#$HOST#g" /etc/update-motd.d/myMotd 
 echo $PASS | sudo -S sed -i -- "s#username#$USER#g" /etc/update-motd.d/myMotd 
 
+# ssh 太慢
+echo $PASS | sudo -S sed -i 's/#UseDNS/UseDNS/g' /etc/ssh/sshd_config
+echo $PASS | sudo -S sed -i 's/#GSSAPIAuthentication/GSSAPIAuthentication/g' /etc/ssh/sshd_config 
+
 wait_apt_lock()
 
 # 安裝 motd.d 用到的套件 figlet boxes
