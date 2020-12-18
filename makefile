@@ -32,4 +32,3 @@ user_skel:
 zsh:
 	sh script/zsh.sh 
 
-
