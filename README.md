@@ -150,12 +150,12 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 
 ### 5. where is my python3
 1. system python3.8
-![](https://i.imgur.com/V4KocVp.png)
+![](https://i.imgur.com/zt3WSCS.png)
 2. anaconda python3.7 if activated
-![](https://i.imgur.com/SSYvZ8K.png)
+![](https://i.imgur.com/0Jx45V9.png)
 
 ### 6. where is my pip & pip3
 1. pip3 : system 
-![](https://i.imgur.com/FrwFe90.png)
+![](https://i.imgur.com/ZL0YjCm.png)
 2. pip : anaconda
-![](https://i.imgur.com/AyrHnuM.png)
+![](https://i.imgur.com/YdpKH7s.png)
