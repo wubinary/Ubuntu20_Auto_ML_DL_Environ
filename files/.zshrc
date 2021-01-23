@@ -152,6 +152,8 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv vcs newline con
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir anaconda virtualenv pyenv node_version nodeenv nvm java_version vcs newline context) #newline
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
-source /home/$USER/anaconda3/bin/activate
-conda deactivate
-	
+if [ -d "/home/$USER/anaconda3/" ]; then 
+	source /home/$USER/anaconda3/bin/activate
+	conda deactivate
+fi
+
