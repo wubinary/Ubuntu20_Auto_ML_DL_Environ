@@ -159,3 +159,10 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F60F4B3D7FA2AF80
 ![](https://i.imgur.com/ZL0YjCm.png)
 2. pip : anaconda
 ![](https://i.imgur.com/YdpKH7s.png)
+
+### 7. old version (before 2020/01/24) SSH connect so slow
+bug: motd get ip-address to slow
+> sudo vim /etc/update-motd.d/myMotd
+> comment line 22 (IP Address ...), which cause long time 
+
+![](https://i.imgur.com/mdsHQoG.png)

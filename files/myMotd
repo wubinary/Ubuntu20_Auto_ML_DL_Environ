@@ -19,7 +19,7 @@ echo "$(tput setaf 3)
  `uname -srmo`$(tput setaf 6)
  Uptime.............: ${UPTIME}
  Running Processes..: `ps ax | wc -l | tr -d " "`
- IP Addresses.......: `ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/` and `wget -q -O - http://icanhazip.com/ | tail`
+ IP Addresses.......: `ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/`
 $(tput sgr0)"
 
 
