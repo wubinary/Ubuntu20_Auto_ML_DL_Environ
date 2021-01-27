@@ -2,7 +2,7 @@
 scikit-learn
 xgboost
 
-fasttext
+#fasttext
 gensim
 
 
