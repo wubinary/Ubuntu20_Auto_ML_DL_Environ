@@ -157,3 +157,7 @@ if [ -d "/home/$USER/anaconda3/" ]; then
 	conda deactivate
 fi
 
+#if [ "/home/${USER}" = "${PWD}" ]; then
+#	cd ~/Desktop/
+#fi 
+
