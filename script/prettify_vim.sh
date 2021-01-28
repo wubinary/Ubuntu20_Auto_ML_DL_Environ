@@ -63,8 +63,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+colorscheme molokai " set theme
 set bg=dark
 set t_Co=256
+
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 "let g:ycm_add_preview_to_completeopt = 1
@@ -120,8 +122,6 @@ set tabstop=4
 set backspace=2
 set ai
 
-set bg=dark
-
 set fileencodings=utf8,big5,gbk,latin1
 set fileencoding=utf8
 set <C-u>=^U
@@ -170,6 +170,12 @@ echo "$result"
 sed -i "s#\/usr\/include\/c++\/xx#$result#g" /home/$USER/.vim/bundle/YouCompleteMe//.ycm_extra_conf.py 
 
 wait 
+
+### copy colorscheme molokai/monokai
+mkdir -p /home/$USER/.vim/colors
+cp ./files/molokai.vim /home/$USER/.vim/colors/
+cp ./files/monokai.vim /home/$USER/.vim/colors/
+wait
 
 show "[Info] finished install & config vim"
 

@@ -2,8 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+colorscheme molokai " set theme
 set bg=dark
 set t_Co=256
+
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 "let g:ycm_add_preview_to_completeopt = 1
@@ -58,8 +60,6 @@ set shiftwidth=4 " 換行 跳4個空白
 set tabstop=4
 set backspace=2
 set ai
-
-set bg=dark
 
 set fileencodings=utf8,big5,gbk,latin1
 set fileencoding=utf8
