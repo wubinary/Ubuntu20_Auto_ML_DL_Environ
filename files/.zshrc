@@ -6,6 +6,14 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$USER/.oh-my-zsh"
 
+if [ -d "/usr/local/cuda/" ]; then
+	export CUDA_HOME=/usr/local/cuda
+	export PATH=$PATH:/usr/local/cuda/bin
+	export CPATH=$CPATH:/usr/local/cuda/include
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+	export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/cuda/libnvvp 
+fi 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
