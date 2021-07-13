@@ -104,8 +104,15 @@ fi
 wait 
 
 ##########################################
+########   powerlevel10k files  ##########
+if [ ! -d "/home/$USER/powerlevel10k/" ]; then
+	cp -r ./files/powerlevel10k ~/powerlevel10k  
+fi 
+
+##########################################
 #######  download powrline font  #########
 #TODO:
+
 
 ###################
 #### start zsh ####
