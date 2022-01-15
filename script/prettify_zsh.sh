@@ -109,6 +109,9 @@ if [ ! -d "/home/$USER/powerlevel10k/" ]; then
 	cp -r ./files/powerlevel10k ~/powerlevel10k  
 fi 
 
+### tmux config
+cp ./files/.tmux.conf /home/$USER/
+
 ##########################################
 #######  download powrline font  #########
 #TODO:

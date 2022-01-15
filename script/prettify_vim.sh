@@ -40,6 +40,7 @@ download_from_gdrive() {
 #############  Default vim  ###############
 show "[Info] Install default vim config"
 echo $PASS | sudo -S apt-get -y install vim 
+echo $PASS | sudo -S apt-get -y install ctags
 wait_apt_lock()
 
 ###########################################
@@ -102,6 +103,7 @@ Plugin 'gmarik/vundle'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'preservim/nerdtree'
+Plugin 'majutsushi/tagbar'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between here and filetype plugin indent on.
@@ -149,6 +151,10 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 map  <C-l> :tabn<CR>
 map  <C-j> :tabp<CR>
 map  <C-n> :tabnew<CR>
+let g:NERDTreeWinSize=20
+
+" TAGBar
+nmap <F6> :TagbarToggle<CR>
 
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Plugin commands are not allowed.
